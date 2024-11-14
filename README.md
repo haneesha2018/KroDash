@@ -27,7 +27,8 @@ The Kroger Retail Data Dashboard provides an interactive visualization and analy
 - **Deployment:** Hosted on Heroku with data stored in Azure PostgreSQL.
 
 ## Installation
->**Note:** To run this repository, you need to have PostgreSQL installed on your local machine or use a cloud-based PostgreSQL service such as Heroku Postgres, Amazon RDS, Google Cloud SQL, or Azure Database for PostgreSQL. This project specifically uses Azure Database for PostgreSQL. Ensure PostgreSQL is properly set up and accessible, then update the project's configuration file with the appropriate database connection details.
+>**Note:** To run this repository, you need to have PostgreSQL installed on your local machine or use a cloud-based PostgreSQL service such as Heroku Postgres, Amazon RDS, Google Cloud SQL, or Azure Database for PostgreSQL. 
+This project specifically uses Azure Database for PostgreSQL. Ensure PostgreSQL is properly set up and accessible, then update the project's configuration file with the database connection details.
 
 Follow these steps to set up KroDash on your local machine:
 
