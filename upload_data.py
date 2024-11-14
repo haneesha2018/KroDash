@@ -1,9 +1,13 @@
 import psycopg2
 import os
+from dotenv import find_dotenv, load_dotenv
+
+load_dotenv(find_dotenv())
+DB_PASSWORD = os.getenv("DB_PASSWORD")
 
 # Establish connection to PostgreSQL Azure database
 conn = psycopg2.connect(user="haneesha2018", 
-                        password="Hello123#", 
+                        password=DB_PASSWORD, 
                         host="retail-data.postgres.database.azure.com", 
                         port=5432, 
                         database="postgres")
