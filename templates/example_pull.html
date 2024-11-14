@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+{% block title %}Example Data Pull{% endblock %} 
+{% block content %}
+<div class="d-flex flex-column flex-grow-1">
+  <h2 class="fw-bold text-center mt-4">Hello, {{ name }}</h2>
+  <h2 class="fw-bold text-center">EXAMPLE DATA PULL FOR HH #0010</h2>
+  <div class="flex-grow-1 align-self-center p-5 pt-3">
+    <table class="text-center table table-striped table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Household Number</th>
+          <th>Basket number</th>
+          <th>Date of Purchase</th>
+          <th>Product Number</th>
+          <th>Department</th>
+          <th>Commodity</th>
+          <th>Spent Amount</th>
+          <th>Units Purchased</th>
+          <th>Store Region</th>
+          <th>Week Number</th>
+          <th>Year</th>
+          <th>Loyalty Flag</th>
+          <th>Age Range</th>
+          <th>Marital Status</th>
+          <th>Income Range</th>
+          <th>Homeowner Description</th>
+          <th>Household Composition</th>
+          <th>Household Size</th>
+          <th>Number of Children</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for household in households %}
+        <tr>
+          <td>{{ household[0].hshd_num }}</td>
+          <td>{{ household[1].basket_num }}</td>
+          <td>{{ household[1].purchase }}</td>
+          <td>{{ household[1].product_num }}</td>
+          <td>{{ household[2].department }}</td>
+          <td>{{ household[2].commodity }}</td>
+          <td>{{ household[1].spend }}</td>
+          <td>{{ household[1].units }}</td>
+          <td>{{ household[1].store_r }}</td>
+          <td>{{ household[1].week_num }}</td>
+          <td>{{ household[1].year }}</td>
+          <td>{{ household[0].l }}</td>
+          <td>{{ household[0].age_range }}</td>
+          <td>{{ household[0].marital }}</td>
+          <td>{{ household[0].income_range }}</td>
+          <td>{{ household[0].homeowner }}</td>
+          <td>{{ household[0].hshd_composition }}</td>
+          <td>{{ household[0].hh_size }}</td>
+          <td>{{ household[0].children }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
